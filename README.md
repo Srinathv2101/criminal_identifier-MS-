@@ -16,8 +16,6 @@ chmod +x headhunt.py
 3. Obtain a Microsoft Azure FaceAPI Endpoint and Key. Place both in the config.py file. The API subscription can be either free or paid version. 
 Link: https://azure.microsoft.com/en-us/services/cognitive-services/face/
 
-<img src="https://i.imgur.com/YDRUT2u.png" width="50%" height="50%" border="1" />
-
 ## Grimes Example
 I provided a Person Example using the singer-celebrity Grimes. 
 ### Example 1: Person-To-Face
@@ -36,4 +34,4 @@ Description: Create a Person object using example images of Grimes in the KnownP
 This script is supported on Windows, Linux, and MacOS.
 
 ## How-To Video
-[![How To Video](https://img.youtube.com/vi/rnMrB7M15pk/0.jpg)](https://www.youtube.com/watch?v=rnMrB7M15pk)
+[![How To Video]](youtube_url)
