@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<style>
+body {
+    background-image: url('/static/background_imgs/prison_background.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;  
+    background-size: 100%;
+    background-position-x: center ;
+    background-position-y: center;
+    text-align: center;
+  }
+.col{
+    color: aliceblue;
+}
+.lov{
+    padding-top: 23%;
+}
+</style>
+<div class ='col'>
+<h1>Welcome to the security desk.</h1><br><br><br>
+    <form method="post" action="/">
+        <h3>This is the 'many-to-one' criminal finder which when given a folder of images and a specific criminal<br> to be found(present in our database), will return all the images with said criminal present in them.</h3>
+        <input type="submit" value="FIND CRIMINAL" name="action2"/><br>
+        <div class="lov">
+        <h3>This is the 'one-to-many' criminal checker which given an image will identify and mark all the criminals(present in our database) in it.</h3>
+        <input type="submit" value="CHECK FOR CRIMINALS" name="action1"/><br>
+        </div>
+    </form>
+</div>

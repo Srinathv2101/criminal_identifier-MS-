@@ -1,0 +1,52 @@
+<!doctype html>
+<style>
+	 body {
+  background-color: rgb(128, 134, 134);
+  text-align: center;
+}
+.push{
+	padding-top: 5%;
+}
+h1{
+	color: rgb(142, 3, 3);
+	padding-top: 5%;
+}
+</style>
+<h1>This is a 'many-to-one' criminal identifier. Given multiple image files and a specific <br>target(criminal present in database),
+    will return all the images with the specified target in them.
+</h1>
+<div class ='push'>
+<title>Python Flask Multiple Files Upload Example</title>
+<h2>Select file(s) to upload</h2>
+<p>
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+<ul class=flashes>
+{% for message in messages %}
+<li>{{ message }}</li>
+{% endfor %}
+</ul>
+{% endif %}
+{% endwith %}
+</p>
+<form method="post" action="/find" enctype="multipart/form-data">
+<dl>
+<p>
+<input type="file" name="files[]" multiple="true" autocomplete="off" required>
+</p>
+</dl>
+<p>
+    <label for="name" style ="font-size: 30px;">Name of criminal to be found</label><br>
+    <input type="text" id="name" name="name"><br> 
+<input type="submit" value="Submit">
+</p>
+</form>
+
+{% if filenames %}
+	{% for filename in filenames %}
+		<div>
+			<img src="{{ url_for('send_image', filename=filename) }}">
+		</div>
+	{% endfor %}
+{% endif %}
+</div>

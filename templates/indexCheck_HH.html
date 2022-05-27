@@ -1,0 +1,46 @@
+<!doctype html>
+<style>
+	body {
+  background-color: rgb(128, 134, 134);
+  text-align: center;
+}
+h1{
+	color: rgb(138, 7, 7);
+	padding-top: 5%;
+}
+.mem{
+	padding-top: 5%;
+}
+</style>
+<h1>This is the 'one-to-many' criminal identifier. Given a target image, 
+	the system will <br>return the image with boxes produced around the heads of all criminals(present in database) in the photo.
+</h1>
+<div class="mem">
+<h2>Select file to upload</h2>
+<p>
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+<ul class=flashes>
+{% for message in messages %}
+<li>{{ message }}</li>
+{% endfor %}
+</ul>
+{% endif %}
+{% endwith %}
+</p>
+<form method="post" action="/check" enctype="multipart/form-data">
+<dl>
+<p>
+<input type="file" name="file" autocomplete="off" required><br>
+<input type="submit" value="Submit">
+</p>
+</dl>
+</form>
+{% if filenames %}
+	{% for filename in filenames %}
+		<div>
+			<img src="{{ url_for('check_result', filename=filename) }}">
+		</div>
+	{% endfor %}
+{% endif %}
+</div>

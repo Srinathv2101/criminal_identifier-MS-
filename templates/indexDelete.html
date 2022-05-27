@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<style>
+     body {
+  background-image: url('/static/background_imgs/erasing_background.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: 100%;
+  background-position-x: center;
+  background-position-y: center;
+  text-align: center;
+}
+.del{
+    padding-top: 22%;
+}
+</style>
+<div class="del">
+<form method="post" action="/delete">
+    <p>
+    <label for="name" style ="font-size: 27px;color: rgb(182, 175, 175);">Name of person to be deleted from database</label><br><br>
+    <input type="text" id="name" name="name"><br> 
+    <input type="submit" value="Submit">
+    </p>
+</form>
+</div>

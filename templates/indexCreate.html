@@ -1,0 +1,55 @@
+<!doctype html>
+<style>
+    body {
+  background-image: url('/static/background_imgs/folder_background.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+  text-align: center;
+}
+.show{
+    color: black;
+}
+.pad{
+    padding-top: 2%;
+}
+h1{
+    color: rgb(235, 18, 18);
+    padding-top: 5%;
+}
+
+</style>
+<h1>
+    Provide 2-3(or more) training images for our system
+ to learn our criminal <br> so that we can accurately find them
+ incase they escape!!<br> Completely different images produce better results.
+</h1>
+<div class ="pad">
+<title>Python Flask Multiple Files Upload Example</title>
+<div class="show">
+<h2>Select file(s) to upload</h2>
+<p>
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+<ul class=flashes>
+{% for message in messages %}
+<li>{{ message }}</li>
+{% endfor %}
+</ul>
+{% endif %}
+{% endwith %}
+</p>
+</div>
+<form method="post" action="/create" enctype="multipart/form-data">
+<dl>
+<p>
+<input type="file" name="files[]" multiple="true" autocomplete="off" required>
+</p>
+</dl>
+<p>
+    <label for="name">Name of criminal to be added into database</label><br>
+    <input type="text" id="name" name="name"><br> 
+<input type="submit" value="Submit">
+</p>
+</form>
+</div>
