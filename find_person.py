@@ -2,7 +2,6 @@
 # Created By: Srinath Venkatraman
 # Description: Python Script uses Azure FaceAPI to detect and verify faces.
 import os
-from random import random
 import time
 import re
 import argparse
@@ -11,7 +10,6 @@ import colorama
 import shutil
 import http.client, urllib, base64
 from config import config
-##from termcolor import colored
 from pathlib import Path
 from azure.cognitiveservices.vision.face import FaceClient
 from msrest.authentication import CognitiveServicesCredentials
@@ -33,7 +31,6 @@ global intFileIndex
 intFileIndex = 0
 global intSuccessMatches
 intSuccessMatches = 0
-imageCompareDir = os.path.join(os.getcwd(), 'Images')
 global dirFoundImages
 dirFoundImages = './static/Found'
 global personList

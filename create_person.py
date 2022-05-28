@@ -6,7 +6,6 @@ import argparse
 import time
 import re
 import shutil
-from unicodedata import name
 from config import config
 from termcolor import colored
 from azure.cognitiveservices.vision.face import FaceClient
